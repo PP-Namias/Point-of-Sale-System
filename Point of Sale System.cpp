@@ -70,7 +70,7 @@ void enter()
 	system("cls");
 	system("color e4");
 
-	f.open("mall.txt", ios::out | ios::app);
+	f.open("database.txt", ios::out | ios::app);
 	m.getdata();
 	f.write((char*)&m, sizeof(mall));
 	f.close();
@@ -84,7 +84,7 @@ void display()
 	system("color e4");
 	cout << "\n\n\t\tDISPLAYING ALL RECORDS !!!\n\n";
 
-	f.open("mall.txt", ios::in);
+	f.open("database.txt", ios::in);
 	menu();
 
 	while (f.peek() != EOF)
@@ -105,7 +105,7 @@ void search()
 	cout << "\n\n\tEnter the Product No. of the Product to be searched: ";
 	cin >> no;
 
-	f.open("mall.txt", ios::in);
+	f.open("database.txt", ios::in);
 	menu();
 
 	while (f.read((char*)&m, sizeof(mall)))
@@ -132,7 +132,7 @@ void update()
 	cout << "\n\n\tTo Update...Enter The Product No: ";
 	cin >> no;
 
-	f.open("mall.txt", ios::in | ios::out);
+	f.open("database.txt", ios::in | ios::out);
 	menu();
 
 	while (f.read((char*)&m, sizeof(mall)) && found == 0)
@@ -166,7 +166,7 @@ void erase()
 	cout << "\n\n\n\tTo Delete...Enter The product No: ";
 	cin >> no;
 
-	f.open("mall.txt", ios::in | ios::out);
+	f.open("database.txt", ios::in | ios::out);
 	fstream ft;
 	ft.open("temp.txt", ios::out);
 	f.seekg(0, ios::beg);
@@ -181,8 +181,8 @@ void erase()
 	ft.close();
 	f.close();
 
-	remove("mall.txt");
-	rename("temp.txt", "mall.txt");
+	remove("database.txt");
+	rename("temp.txt", "database.txt");
 	cout << "\n\n\tRecord  has been Deleted...!!!";
 	display();
 	_getch();
@@ -226,7 +226,7 @@ void place_order()
 
 	for (int x = 0; x <= i; x++)
 	{
-		f.open("mall.txt", ios::in);
+		f.open("database.txt", ios::in);
 		f.read((char*)&m, sizeof(mall));
 
 		while (f)
@@ -267,7 +267,7 @@ void welcome()
 {
 	system("cls");
 	system("color a4");
-	cout << "\n\n\n\n\n\n\n\n\n\n\t\t\t\tWelcome to KASHYAP'S  WORLD";
+	cout << "\n\n\n\n\n\n\n\n\n\n\t\t\t\tWelcome to PP-Namias's Point of Sale System";
 	_getch();
 }
 

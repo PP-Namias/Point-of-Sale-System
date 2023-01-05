@@ -1,4 +1,4 @@
 ﻿  Point of Sale System.cpp
-C:\Users\jkrbn\Downloads\Point of Sale System\Point of Sale System.cpp(53,10): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\jkrbn\Downloads\Point of Sale System\Point of Sale System.cpp(145,17): warning C4309: 'initializing': truncation of constant value
-  Point of Sale System.vcxproj -> C:\Users\jkrbn\Downloads\Point of Sale System\x64\Debug\Point of Sale System.exe
+C:\Users\jkrbn\Downloads\Point-of-Sale-System\Point of Sale System.cpp(53,10): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\jkrbn\Downloads\Point-of-Sale-System\Point of Sale System.cpp(145,17): warning C4309: 'initializing': truncation of constant value
+  Point of Sale System.vcxproj -> C:\Users\jkrbn\Downloads\Point-of-Sale-System\x64\Debug\Point of Sale System.exe
